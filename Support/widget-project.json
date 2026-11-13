@@ -1,0 +1,395 @@
+{
+  "objects": {
+    "492ADC98F832AAAC644E45B2": {
+      "path": "WidgetTests/WidgetTests.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "000000000000000000000002": {
+      "children": [
+        "FFFAEA4705E9BA5B1252D18B",
+        "0AD44927638F303B2D2DE71B",
+        "492ADC98F832AAAC644E45B2"
+      ]
+    },
+    "FFFAEA4705E9BA5B1252D18B": {
+      "isa": "PBXGroup",
+      "name": "Widgets",
+      "children": [
+        "E6B6DBC7C47F669F3237D35D",
+        "5CC5D55D04C72DE715E532EA",
+        "A4F9D01B52B9B0CF400C1D32",
+        "59382A764DE94713F8EA907F",
+        "AB5A8103FDF68A2F9CB84A83"
+      ],
+      "sourceTree": "<group>"
+    },
+    "000000000000000000000003": {
+      "children": [
+        "B5B1DACA89C88491274D5CF8",
+        "631CF1420BEB6D09B24A4B41"
+      ]
+    },
+    "A28DD4BAD84C68DD5723D157": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "9275D9F351F3B51275C991C7",
+        "F13725C1E3598E275C654EB5"
+      ]
+    },
+    "1726604913352F566F7EBE56": {
+      "isa": "PBXBuildFile",
+      "fileRef": "E6B6DBC7C47F669F3237D35D"
+    },
+    "2F6A49F45958F64B10B4D9CB": {
+      "isa": "XCConfigurationList",
+      "defaultConfigurationIsVisible": "0",
+      "defaultConfigurationName": "Release",
+      "buildConfigurations": [
+        "EC72C05B2CD9EF2C50390852",
+        "882B069DA9E1DE4745ABBA3C"
+      ]
+    },
+    "AB5A8103FDF68A2F9CB84A83": {
+      "path": "WidgetExtension/ProgressWidget.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "000000000000000000000004": {
+      "buildPhases": [
+        "0414BA351A484FAF9FCB0609"
+      ],
+      "dependencies": [
+        "575DF396EA883A266C883FBD"
+      ]
+    },
+    "6E7DF586ACF3084ACC94A05D": {
+      "isa": "PBXBuildFile",
+      "fileRef": "0AD44927638F303B2D2DE71B"
+    },
+    "575DF396EA883A266C883FBD": {
+      "isa": "PBXTargetDependency",
+      "target": "BB86C6EEF09F1B8EFF2F10E1",
+      "targetProxy": "771C94B6876033A484F8ED8C"
+    },
+    "EC72C05B2CD9EF2C50390852": {
+      "isa": "XCBuildConfiguration",
+      "name": "Debug",
+      "buildSettings": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "DEBUG",
+        "BUNDLE_LOADER": "$(TEST_HOST)",
+        "TARGETED_DEVICE_FAMILY": "1,2",
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)/MatchMatrix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MatchMatrix",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "SWIFT_OPTIMIZATION_LEVEL": "-Onone",
+        "CODE_SIGN_STYLE": "Automatic",
+        "SDKROOT": "iphoneos",
+        "SWIFT_VERSION": "6.0",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.matchmatrix.analytics.widgettests"
+      }
+    },
+    "CF6E7274E12D795F7453A967": {
+      "isa": "PBXBuildFile",
+      "fileRef": "5CC5D55D04C72DE715E532EA"
+    },
+    "F13725C1E3598E275C654EB5": {
+      "isa": "XCBuildConfiguration",
+      "name": "Release",
+      "buildSettings": {
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/Frameworks",
+          "@executable_path/../../Frameworks"
+        ],
+        "APPLICATION_EXTENSION_API_ONLY": "YES",
+        "CODE_SIGN_STYLE": "Automatic",
+        "MARKETING_VERSION": "1.0",
+        "INFOPLIST_FILE": "WidgetExtension/Info.plist",
+        "SKIP_INSTALL": "YES",
+        "TARGETED_DEVICE_FAMILY": "1,2",
+        "GENERATE_INFOPLIST_FILE": "NO",
+        "CODE_SIGN_ENTITLEMENTS": "Support/Widget.entitlements",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "SDKROOT": "iphoneos",
+        "SWIFT_VERSION": "6.0",
+        "CURRENT_PROJECT_VERSION": "1",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.matchmatrix.analytics.widget"
+      }
+    },
+    "6E6E477D698BF176F431C541": {
+      "productType": "com.apple.product-type.bundle.unit-test",
+      "productReference": "631CF1420BEB6D09B24A4B41",
+      "buildConfigurationList": "2F6A49F45958F64B10B4D9CB",
+      "productName": "MatchMatrixWidgetTests",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "A759A67A6265B1043BD28FD8"
+      ],
+      "dependencies": [
+        "6ECF87CEB0B405855E84CEF5"
+      ],
+      "name": "MatchMatrixWidgetTests",
+      "buildRules": []
+    },
+    "00000000000000000000012C": {
+      "buildSettings": {
+        "CODE_SIGN_ENTITLEMENTS": "Support/App.entitlements",
+        "MARKETING_VERSION": "1.0",
+        "CURRENT_PROJECT_VERSION": "1",
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited) DEBUG",
+        "ENABLE_TESTABILITY": "YES",
+        "INFOPLIST_FILE": "Support/AppInfo.plist"
+      }
+    },
+    "000000000000000000000006": {
+      "files": [
+        "1726604913352F566F7EBE56",
+        "CF6E7274E12D795F7453A967",
+        "C9B460B1B8CF436E3220257F",
+        "E19C85C1E81BEB808A801FA7"
+      ]
+    },
+    "771C94B6876033A484F8ED8C": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "000000000000000000000001",
+      "remoteGlobalIDString": "BB86C6EEF09F1B8EFF2F10E1",
+      "remoteInfo": "MatchMatrixWidget",
+      "proxyType": "1"
+    },
+    "E238D19719B75ACD91662E94": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "4C4ADAF2E562CD33A3567C01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "B5B1DACA89C88491274D5CF8",
+      "settings": {
+        "ATTRIBUTES": [
+          "RemoveHeadersOnCopy"
+        ]
+      }
+    },
+    "59382A764DE94713F8EA907F": {
+      "path": "Sources/WidgetBridge.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "00000000000000000000012D": {
+      "buildSettings": {
+        "MARKETING_VERSION": "1.0",
+        "INFOPLIST_FILE": "Support/AppInfo.plist",
+        "CODE_SIGN_ENTITLEMENTS": "Support/App.entitlements",
+        "CURRENT_PROJECT_VERSION": "1"
+      }
+    },
+    "C9B460B1B8CF436E3220257F": {
+      "isa": "PBXBuildFile",
+      "fileRef": "A4F9D01B52B9B0CF400C1D32"
+    },
+    "78D507190482272BD75AA502": {
+      "isa": "PBXBuildFile",
+      "fileRef": "AB5A8103FDF68A2F9CB84A83"
+    },
+    "019523A1567EA26C623AA6E6": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "5CC5D55D04C72DE715E532EA": {
+      "path": "WidgetShared/WidgetIdentity.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "BDDBDCE60D83457FC5F3FC2F": {
+      "isa": "PBXBuildFile",
+      "fileRef": "5CC5D55D04C72DE715E532EA"
+    },
+    "E19C85C1E81BEB808A801FA7": {
+      "isa": "PBXBuildFile",
+      "fileRef": "59382A764DE94713F8EA907F"
+    },
+    "1677249E11B079EFFCBDD277": {
+      "isa": "PBXBuildFile",
+      "fileRef": "A4F9D01B52B9B0CF400C1D32"
+    },
+    "BB86C6EEF09F1B8EFF2F10E1": {
+      "productType": "com.apple.product-type.app-extension",
+      "productReference": "B5B1DACA89C88491274D5CF8",
+      "buildConfigurationList": "A28DD4BAD84C68DD5723D157",
+      "productName": "MatchMatrixWidget",
+      "isa": "PBXNativeTarget",
+      "buildPhases": [
+        "3E1B2CDAE5A52BF731E6D70B",
+        "E238D19719B75ACD91662E94",
+        "019523A1567EA26C623AA6E6"
+      ],
+      "dependencies": [],
+      "name": "MatchMatrixWidget",
+      "buildRules": []
+    },
+    "882B069DA9E1DE4745ABBA3C": {
+      "isa": "XCBuildConfiguration",
+      "name": "Release",
+      "buildSettings": {
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "TEST_HOST": "$(BUILT_PRODUCTS_DIR)/MatchMatrix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MatchMatrix",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.matchmatrix.analytics.widgettests",
+        "SDKROOT": "iphoneos",
+        "SWIFT_VERSION": "6.0",
+        "CODE_SIGN_STYLE": "Automatic",
+        "TARGETED_DEVICE_FAMILY": "1,2",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "BUNDLE_LOADER": "$(TEST_HOST)"
+      }
+    },
+    "0000000000000000000001F6": {
+      "files": [
+        "6E7DF586ACF3084ACC94A05D"
+      ]
+    },
+    "6ECF87CEB0B405855E84CEF5": {
+      "isa": "PBXTargetDependency",
+      "target": "000000000000000000000004",
+      "targetProxy": "660595B11F752DD6E7924E96"
+    },
+    "E6B6DBC7C47F669F3237D35D": {
+      "path": "WidgetShared/ProgressWidgetView.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "631CF1420BEB6D09B24A4B41": {
+      "path": "MatchMatrixWidgetTests.xctest",
+      "isa": "PBXFileReference",
+      "explicitFileType": "wrapper.cfbundle",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "A759A67A6265B1043BD28FD8": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "89C2DE8C16433534F44E0536"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "9275D9F351F3B51275C991C7": {
+      "isa": "XCBuildConfiguration",
+      "name": "Debug",
+      "buildSettings": {
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/Frameworks",
+          "@executable_path/../../Frameworks"
+        ],
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited) DEBUG",
+        "APPLICATION_EXTENSION_API_ONLY": "YES",
+        "CODE_SIGN_STYLE": "Automatic",
+        "MARKETING_VERSION": "1.0",
+        "INFOPLIST_FILE": "WidgetExtension/Info.plist",
+        "SKIP_INSTALL": "YES",
+        "TARGETED_DEVICE_FAMILY": "1,2",
+        "GENERATE_INFOPLIST_FILE": "NO",
+        "SWIFT_OPTIMIZATION_LEVEL": "-Onone",
+        "CODE_SIGN_ENTITLEMENTS": "Support/Widget.entitlements",
+        "SDKROOT": "iphoneos",
+        "SWIFT_VERSION": "6.0",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "CURRENT_PROJECT_VERSION": "1",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.matchmatrix.analytics.widget"
+      }
+    },
+    "3E1B2CDAE5A52BF731E6D70B": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": "2147483647",
+      "files": [
+        "A80BC4AE909D99BC95DAFAA4",
+        "BDDBDCE60D83457FC5F3FC2F",
+        "1677249E11B079EFFCBDD277",
+        "78D507190482272BD75AA502"
+      ],
+      "runOnlyForDeploymentPostprocessing": "0"
+    },
+    "89C2DE8C16433534F44E0536": {
+      "isa": "PBXBuildFile",
+      "fileRef": "492ADC98F832AAAC644E45B2"
+    },
+    "660595B11F752DD6E7924E96": {
+      "isa": "PBXContainerItemProxy",
+      "containerPortal": "000000000000000000000001",
+      "remoteGlobalIDString": "000000000000000000000004",
+      "remoteInfo": "MatchMatrix",
+      "proxyType": "1"
+    },
+    "A80BC4AE909D99BC95DAFAA4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "E6B6DBC7C47F669F3237D35D"
+    },
+    "0414BA351A484FAF9FCB0609": {
+      "buildActionMask": "2147483647",
+      "dstSubfolderSpec": "13",
+      "isa": "PBXCopyFilesBuildPhase",
+      "runOnlyForDeploymentPostprocessing": "0",
+      "dstPath": "",
+      "files": [
+        "4C4ADAF2E562CD33A3567C01"
+      ],
+      "name": "Embed App Extensions"
+    },
+    "A4F9D01B52B9B0CF400C1D32": {
+      "path": "WidgetShared/WidgetSnapshot.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "B5B1DACA89C88491274D5CF8": {
+      "path": "MatchMatrixWidget.appex",
+      "isa": "PBXFileReference",
+      "explicitFileType": "wrapper.app-extension",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "0AD44927638F303B2D2DE71B": {
+      "path": "WidgetTests/WidgetIntegrationTests.swift",
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "sourceTree": "SOURCE_ROOT"
+    },
+    "000000000000000000000001": {
+      "attributes": {
+        "TargetAttributes": {
+          "BB86C6EEF09F1B8EFF2F10E1": {
+            "SystemCapabilities": {
+              "com.apple.ApplicationGroups.iOS": {
+                "enabled": "1"
+              }
+            }
+          },
+          "000000000000000000000004": {
+            "SystemCapabilities": {
+              "com.apple.ApplicationGroups.iOS": {
+                "enabled": "1"
+              }
+            }
+          }
+        }
+      },
+      "targets": [
+        "BB86C6EEF09F1B8EFF2F10E1",
+        "6E6E477D698BF176F431C541"
+      ]
+    }
+  }
+}

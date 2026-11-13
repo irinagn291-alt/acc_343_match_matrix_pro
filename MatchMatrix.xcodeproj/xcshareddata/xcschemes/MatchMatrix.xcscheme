@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Scheme LastUpgradeVersion="1600" version="1.3">
+  <BuildAction parallelizeBuildables="NO" buildImplicitDependencies="YES">
+    <BuildActionEntries>
+      <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES">
+        <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="000000000000000000000004" BuildableName="MatchMatrix.app" BlueprintName="MatchMatrix" ReferencedContainer="container:MatchMatrix.xcodeproj" />
+      </BuildActionEntry>
+    </BuildActionEntries>
+  </BuildAction>
+  <TestAction buildConfiguration="Debug" shouldUseLaunchSchemeArgsEnv="YES">
+    <Testables>
+      <TestableReference skipped="NO">
+        <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="0000000000000000000001F4" BuildableName="MatchMatrixUITests.xctest" BlueprintName="MatchMatrixUITests" ReferencedContainer="container:MatchMatrix.xcodeproj" />
+      </TestableReference>
+      <TestableReference skipped="NO">
+        <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="6E6E477D698BF176F431C541" BuildableName="MatchMatrixWidgetTests.xctest" BlueprintName="MatchMatrixWidgetTests" ReferencedContainer="container:MatchMatrix.xcodeproj" />
+      </TestableReference>
+    </Testables>
+  </TestAction>
+  <LaunchAction buildConfiguration="Debug" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" allowLocationSimulation="YES">
+    <BuildableProductRunnable runnableDebuggingMode="0">
+      <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="000000000000000000000004" BuildableName="MatchMatrix.app" BlueprintName="MatchMatrix" ReferencedContainer="container:MatchMatrix.xcodeproj" />
+    </BuildableProductRunnable>
+  </LaunchAction>
+</Scheme>

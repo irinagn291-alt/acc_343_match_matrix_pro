@@ -1,0 +1,9 @@
+Reúna seus registros de futebol no Match Matrix, um caderno pessoal para iPhone e iPad.
+
+Adicione times e registre partidas concluídas ou jogos programados. Informe a competição e a data e, se quiser, acrescente escalações e anotações. Consulte resultados e próximos jogos por competição, filtre por data e salve partidas para rever depois.
+
+Abra uma partida para consultar os dados registrados, o desempenho, os gols, os confrontos anteriores e as escalações. Compare dois times usando partidas concluídas, com filtros por quantidade de jogos, local e competição. Toque em um valor para ver as partidas usadas no cálculo.
+
+Salve configurações de comparação e escolha as três estatísticas exibidas nos cartões das partidas. Um widget pequeno ou médio mostra um resumo local dos resultados e itens salvos.
+
+O Match Matrix requer iOS 17 ou posterior. A interface do aplicativo está em inglês britânico.

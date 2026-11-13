@@ -1,0 +1,1 @@
+futebol,partidas,times,jogos,resultados,comparação,estatísticas,caderno

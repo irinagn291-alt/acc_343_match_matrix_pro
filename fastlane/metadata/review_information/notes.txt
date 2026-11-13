@@ -1,0 +1,3 @@
+The app starts with an empty local notebook. In Sport, manage teams and add at least two teams, then add a completed match or planned fixture. Open a match for analysis and bookmark it. In Compare, select two different teams, adjust the filters and tap a value to inspect its source matches. Save the comparison, then open it from Saved. Workspace manages teams, card statistics and the initial Sport view.
+
+Data is stored locally in the app’s Documents directory. A WidgetKit widget reads a summary shared through an App Group and opens Saved when tapped. The app has no account, sports feed, network client or external service integration, and declares no camera, location or other user-permission usage descriptions. The interface is in English (UK).

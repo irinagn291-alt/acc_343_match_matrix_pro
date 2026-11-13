@@ -1,0 +1,43 @@
+import XCTest
+final class MatchMatrixUITests: XCTestCase {
+ @MainActor func testLocalNotebook() throws {
+  let app = XCUIApplication(); app.launch()
+  XCTAssertTrue(app.buttons["Manage teams"].waitForExistence(timeout: 10))
+  app.buttons["Manage teams"].tap()
+  let name = app.textFields["teamName"]
+  name.tap(); name.typeText("Harbour United"); app.buttons["Add team"].tap()
+  name.tap(); name.typeText("Hilltop City"); app.buttons["Add team"].tap()
+  XCTAssertTrue(app.staticTexts["Hilltop City"].exists)
+  app.navigationBars.buttons.element(boundBy: 0).tap()
+  app.buttons["Add match"].tap()
+  app.textFields["competition"].tap(); app.textFields["competition"].typeText("Sunday League")
+  app.buttons["homeGoals-Increment"].tap()
+  app.buttons["homeGoals-Increment"].tap()
+  app.buttons["saveResult"].tap()
+  XCTAssertTrue(app.buttons["match-0"].waitForExistence(timeout: 5))
+  capture("01-local-result")
+  app.buttons["Save match"].firstMatch.tap()
+  app.tabBars.buttons["Compare"].tap()
+  XCTAssertTrue(app.staticTexts["1 / 1 matches"].exists)
+  capture("02-calculated-comparison")
+  app.buttons["Save comparison"].tap()
+  app.terminate(); app.launch()
+  app.tabBars.buttons["Saved"].tap()
+  XCTAssertTrue(app.buttons["Delete comparison"].waitForExistence(timeout: 5))
+  XCTAssertTrue(app.buttons["Unsave match"].exists)
+  capture("03-persisted-notebook")
+  app.buttons["match-0"].tap()
+  app.swipeUp()
+  app.buttons["Edit match"].tap()
+  app.buttons["awayGoals-Increment"].tap()
+  app.buttons["saveResult"].tap()
+  app.swipeDown()
+  XCTAssertTrue(app.staticTexts["2 : 1"].waitForExistence(timeout: 5))
+  capture("04-edited-result")
+  app.swipeUp(); app.buttons["Delete match"].tap()
+  app.buttons.matching(identifier: "Delete match").allElementsBoundByIndex.last!.tap()
+  app.terminate(); app.launch()
+  XCTAssertFalse(app.buttons["match-0"].exists)
+ }
+ @MainActor func capture(_ name: String) { Thread.sleep(forTimeInterval: 0.4); let a = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); a.name = name; a.lifetime = .keepAlways; add(a) }
+}

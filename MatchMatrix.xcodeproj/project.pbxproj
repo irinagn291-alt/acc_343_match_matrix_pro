@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	classes = {
+	};
+	objectVersion = 56;
+	archiveVersion = 1;
+	objects = {
+		492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */ = {
+			path = WidgetTests/WidgetTests.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		000000000000000000000002 /* PBXGroup */ = {
+			isa = PBXGroup;
+			sourceTree = "<group>";
+			children = (
+				000000000000000000000258 /* Assets.xcassets */,
+				0000000000000000000001F8 /* Tests/UITests.swift */,
+				000000000000000000000064 /* Sources/App.swift */,
+				000000000000000000000065 /* Sources/Domain.swift */,
+				000000000000000000000066 /* Sources/Store.swift */,
+				000000000000000000000003 /* Products */,
+				FFFAEA4705E9BA5B1252D18B /* Widgets */,
+				0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */,
+				492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */,
+			);
+		};
+		FFFAEA4705E9BA5B1252D18B /* Widgets */ = {
+			isa = PBXGroup;
+			name = Widgets;
+			children = (
+				E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */,
+				5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */,
+				A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */,
+				59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */,
+				AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		00000000000000000000000A /* XCConfigurationList */ = {
+			isa = XCConfigurationList;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			buildConfigurations = (
+				000000000000000000000190 /* Debug */,
+				000000000000000000000191 /* Release */,
+			);
+		};
+		000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			children = (
+				0000000000000000000001F5 /* MatchMatrixUITests.xctest */,
+				000000000000000000000005 /* MatchMatrix.app */,
+				B5B1DACA89C88491274D5CF8 /* MatchMatrixWidget.appex */,
+				631CF1420BEB6D09B24A4B41 /* MatchMatrixWidgetTests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		A28DD4BAD84C68DD5723D157 /* XCConfigurationList */ = {
+			isa = XCConfigurationList;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			buildConfigurations = (
+				9275D9F351F3B51275C991C7 /* Debug */,
+				F13725C1E3598E275C654EB5 /* Release */,
+			);
+		};
+		1726604913352F566F7EBE56 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */;
+		};
+		0000000000000000000000CA /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 000000000000000000000066 /* Sources/Store.swift */;
+		};
+		2F6A49F45958F64B10B4D9CB /* XCConfigurationList */ = {
+			isa = XCConfigurationList;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			buildConfigurations = (
+				EC72C05B2CD9EF2C50390852 /* Debug */,
+				882B069DA9E1DE4745ABBA3C /* Release */,
+			);
+		};
+		AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */ = {
+			path = WidgetExtension/ProgressWidget.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		000000000000000000000004 /* MatchMatrix */ = {
+			productType = "com.apple.product-type.application";
+			productReference = 000000000000000000000005 /* MatchMatrix.app */;
+			buildConfigurationList = 000000000000000000000009 /* XCConfigurationList */;
+			productName = MatchMatrix;
+			isa = PBXNativeTarget;
+			buildPhases = (
+				000000000000000000000006 /* PBXSourcesBuildPhase */,
+				000000000000000000000008 /* PBXFrameworksBuildPhase */,
+				000000000000000000000007 /* PBXResourcesBuildPhase */,
+				0414BA351A484FAF9FCB0609 /* Embed App Extensions */,
+			);
+			dependencies = (
+				575DF396EA883A266C883FBD /* PBXTargetDependency */,
+			);
+			name = MatchMatrix;
+			buildRules = (
+			);
+		};
+		6E7DF586ACF3084ACC94A05D /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */;
+		};
+		575DF396EA883A266C883FBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */;
+			targetProxy = 771C94B6876033A484F8ED8C /* PBXContainerItemProxy */;
+		};
+		EC72C05B2CD9EF2C50390852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatchMatrix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MatchMatrix";
+				GENERATE_INFOPLIST_FILE = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_STYLE = Automatic;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.widgettests;
+			};
+		};
+		CF6E7274E12D795F7453A967 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */;
+		};
+		000000000000000000000005 /* MatchMatrix.app */ = {
+			path = MatchMatrix.app;
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F13725C1E3598E275C654EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MARKETING_VERSION = 1.0;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				CODE_SIGN_ENTITLEMENTS = Support/Widget.entitlements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.widget;
+			};
+		};
+		6E6E477D698BF176F431C541 /* MatchMatrixWidgetTests */ = {
+			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = 631CF1420BEB6D09B24A4B41 /* MatchMatrixWidgetTests.xctest */;
+			buildConfigurationList = 2F6A49F45958F64B10B4D9CB /* XCConfigurationList */;
+			productName = MatchMatrixWidgetTests;
+			isa = PBXNativeTarget;
+			buildPhases = (
+				A759A67A6265B1043BD28FD8 /* PBXSourcesBuildPhase */,
+			);
+			dependencies = (
+				6ECF87CEB0B405855E84CEF5 /* PBXTargetDependency */,
+			);
+			name = MatchMatrixWidgetTests;
+			buildRules = (
+			);
+		};
+		00000000000000000000012C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Support/App.entitlements;
+				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics;
+				INFOPLIST_KEY_CFBundleDisplayName = "Match Matrix";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SDKROOT = iphoneos;
+				ENABLE_TESTABILITY = YES;
+				SWIFT_VERSION = 6.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Support/AppInfo.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+			};
+			name = Debug;
+		};
+		000000000000000000000006 /* PBXSourcesBuildPhase */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000000000000000000C8 /* PBXBuildFile */,
+				0000000000000000000000C9 /* PBXBuildFile */,
+				0000000000000000000000CA /* PBXBuildFile */,
+				1726604913352F566F7EBE56 /* PBXBuildFile */,
+				CF6E7274E12D795F7453A967 /* PBXBuildFile */,
+				C9B460B1B8CF436E3220257F /* PBXBuildFile */,
+				E19C85C1E81BEB808A801FA7 /* PBXBuildFile */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771C94B6876033A484F8ED8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* PBXProject */;
+			remoteGlobalIDString = BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */;
+			remoteInfo = MatchMatrixWidget;
+			proxyType = 1;
+		};
+		E238D19719B75ACD91662E94 /* PBXFrameworksBuildPhase */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C4ADAF2E562CD33A3567C01 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = B5B1DACA89C88491274D5CF8 /* MatchMatrixWidget.appex */;
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+		59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */ = {
+			path = Sources/WidgetBridge.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		00000000000000000000012D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics;
+				MARKETING_VERSION = 1.0;
+				INFOPLIST_FILE = Support/AppInfo.plist;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Match Matrix";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				CODE_SIGN_ENTITLEMENTS = Support/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				SWIFT_VERSION = 6.0;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+			};
+			name = Release;
+		};
+		C9B460B1B8CF436E3220257F /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */;
+		};
+		78D507190482272BD75AA502 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */;
+		};
+		000000000000000000000007 /* PBXResourcesBuildPhase */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000259 /* PBXBuildFile */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019523A1567EA26C623AA6E6 /* PBXResourcesBuildPhase */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+			};
+			name = Debug;
+		};
+		000000000000000000000064 /* Sources/App.swift */ = {
+			path = Sources/App.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = "<group>";
+		};
+		000000000000000000000008 /* PBXFrameworksBuildPhase */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */ = {
+			path = WidgetShared/WidgetIdentity.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		BDDBDCE60D83457FC5F3FC2F /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */;
+		};
+		0000000000000000000001F4 /* MatchMatrixUITests */ = {
+			productType = "com.apple.product-type.bundle.ui-testing";
+			productReference = 0000000000000000000001F5 /* MatchMatrixUITests.xctest */;
+			buildConfigurationList = 0000000000000000000001F7 /* XCConfigurationList */;
+			productName = MatchMatrixUITests;
+			isa = PBXNativeTarget;
+			buildPhases = (
+				0000000000000000000001F6 /* PBXSourcesBuildPhase */,
+			);
+			dependencies = (
+			);
+			name = MatchMatrixUITests;
+			buildRules = (
+			);
+		};
+		0000000000000000000000C8 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 000000000000000000000064 /* Sources/App.swift */;
+		};
+		000000000000000000000191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				CLANG_ENABLE_MODULES = YES;
+			};
+			name = Release;
+		};
+		E19C85C1E81BEB808A801FA7 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */;
+		};
+		000000000000000000000009 /* XCConfigurationList */ = {
+			isa = XCConfigurationList;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			buildConfigurations = (
+				00000000000000000000012C /* Debug */,
+				00000000000000000000012D /* Release */,
+			);
+		};
+		000000000000000000000065 /* Sources/Domain.swift */ = {
+			path = Sources/Domain.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = "<group>";
+		};
+		0000000000000000000001F5 /* MatchMatrixUITests.xctest */ = {
+			path = MatchMatrixUITests.xctest;
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0000000000000000000000C9 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 000000000000000000000065 /* Sources/Domain.swift */;
+		};
+		1677249E11B079EFFCBDD277 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */;
+		};
+		BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */ = {
+			productType = "com.apple.product-type.app-extension";
+			productReference = B5B1DACA89C88491274D5CF8 /* MatchMatrixWidget.appex */;
+			buildConfigurationList = A28DD4BAD84C68DD5723D157 /* XCConfigurationList */;
+			productName = MatchMatrixWidget;
+			isa = PBXNativeTarget;
+			buildPhases = (
+				3E1B2CDAE5A52BF731E6D70B /* PBXSourcesBuildPhase */,
+				E238D19719B75ACD91662E94 /* PBXFrameworksBuildPhase */,
+				019523A1567EA26C623AA6E6 /* PBXResourcesBuildPhase */,
+			);
+			dependencies = (
+			);
+			name = MatchMatrixWidget;
+			buildRules = (
+			);
+		};
+		000000000000000000000066 /* Sources/Store.swift */ = {
+			path = Sources/Store.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = "<group>";
+		};
+		882B069DA9E1DE4745ABBA3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatchMatrix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MatchMatrix";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.widgettests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				CODE_SIGN_STYLE = Automatic;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+			};
+		};
+		0000000000000000000001F6 /* PBXSourcesBuildPhase */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000000000000000001F9 /* PBXBuildFile */,
+				6E7DF586ACF3084ACC94A05D /* PBXBuildFile */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ECF87CEB0B405855E84CEF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000004 /* MatchMatrix */;
+			targetProxy = 660595B11F752DD6E7924E96 /* PBXContainerItemProxy */;
+		};
+		E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */ = {
+			path = WidgetShared/ProgressWidgetView.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		631CF1420BEB6D09B24A4B41 /* MatchMatrixWidgetTests.xctest */ = {
+			path = MatchMatrixWidgetTests.xctest;
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A759A67A6265B1043BD28FD8 /* PBXSourcesBuildPhase */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C2DE8C16433534F44E0536 /* PBXBuildFile */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000000000000000001FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.uitests;
+				SWIFT_VERSION = 6.0;
+				SDKROOT = iphoneos;
+				TEST_TARGET_NAME = MatchMatrix;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+		};
+		0000000000000000000001F7 /* XCConfigurationList */ = {
+			isa = XCConfigurationList;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			buildConfigurations = (
+				0000000000000000000001FE /* Debug */,
+				0000000000000000000001FF /* Release */,
+			);
+		};
+		9275D9F351F3B51275C991C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MARKETING_VERSION = 1.0;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_ENTITLEMENTS = Support/Widget.entitlements;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.widget;
+			};
+		};
+		3E1B2CDAE5A52BF731E6D70B /* PBXSourcesBuildPhase */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80BC4AE909D99BC95DAFAA4 /* PBXBuildFile */,
+				BDDBDCE60D83457FC5F3FC2F /* PBXBuildFile */,
+				1677249E11B079EFFCBDD277 /* PBXBuildFile */,
+				78D507190482272BD75AA502 /* PBXBuildFile */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C2DE8C16433534F44E0536 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */;
+		};
+		0000000000000000000001FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchmatrix.analytics.uitests;
+				SWIFT_VERSION = 6.0;
+				SDKROOT = iphoneos;
+				TEST_TARGET_NAME = MatchMatrix;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+		};
+		0000000000000000000001F8 /* Tests/UITests.swift */ = {
+			path = Tests/UITests.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = "<group>";
+		};
+		660595B11F752DD6E7924E96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000001 /* PBXProject */;
+			remoteGlobalIDString = 000000000000000000000004 /* MatchMatrix */;
+			remoteInfo = MatchMatrix;
+			proxyType = 1;
+		};
+		A80BC4AE909D99BC95DAFAA4 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */;
+		};
+		000000000000000000000258 /* Assets.xcassets */ = {
+			path = Assets.xcassets;
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			sourceTree = "<group>";
+		};
+		0000000000000000000001F9 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 0000000000000000000001F8 /* Tests/UITests.swift */;
+		};
+		0414BA351A484FAF9FCB0609 /* Embed App Extensions */ = {
+			buildActionMask = 2147483647;
+			dstSubfolderSpec = 13;
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			files = (
+				4C4ADAF2E562CD33A3567C01 /* PBXBuildFile */,
+			);
+			name = "Embed App Extensions";
+		};
+		000000000000000000000259 /* PBXBuildFile */ = {
+			isa = PBXBuildFile;
+			fileRef = 000000000000000000000258 /* Assets.xcassets */;
+		};
+		A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */ = {
+			path = WidgetShared/WidgetSnapshot.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		B5B1DACA89C88491274D5CF8 /* MatchMatrixWidget.appex */ = {
+			path = MatchMatrixWidget.appex;
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */ = {
+			path = WidgetTests/WidgetIntegrationTests.swift;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		000000000000000000000001 /* PBXProject */ = {
+			buildConfigurationList = 00000000000000000000000A /* XCConfigurationList */;
+			projectDirPath = "";
+			projectRoot = "";
+			knownRegions = (
+				en_GB,
+				Base,
+			);
+			isa = PBXProject;
+			compatibilityVersion = "Xcode 14.0";
+			productRefGroup = 000000000000000000000003 /* Products */;
+			mainGroup = 000000000000000000000002 /* PBXGroup */;
+			developmentRegion = en_GB;
+			attributes = {
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */ = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					000000000000000000000004 /* MatchMatrix */ = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			targets = (
+				000000000000000000000004 /* MatchMatrix */,
+				0000000000000000000001F4 /* MatchMatrixUITests */,
+				BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */,
+				6E6E477D698BF176F431C541 /* MatchMatrixWidgetTests */,
+			);
+		};
+	};
+	rootObject = 000000000000000000000001 /* PBXProject */;
+}
