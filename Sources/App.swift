@@ -35,7 +35,9 @@ enum ScreenshotRoute: String, CaseIterable {
 enum ScreenshotDestination: Hashable { case matchAnalysis, metricEvidence, teams }
 #endif
 
-@main struct MatchMatrixApp: App {
+@main
+struct MatchMatrixApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     #if DEBUG && targetEnvironment(simulator)
     @State private var store: Store = {
         if let route = ScreenshotRoute.current { return Store(screenshot: route) }
@@ -44,9 +46,102 @@ enum ScreenshotDestination: Hashable { case matchAnalysis, metricEvidence, teams
     #else
     @State private var store = Store()
     #endif
-    var body: some Scene { WindowGroup { RootView().environment(store).environment(\.locale, Locale(identifier: "en_GB")).preferredColorScheme(.dark).tint(Palette.yellow) } }
+    var body: some Scene {
+        WindowGroup {
+            RegistrationRoot { pendingWidgetURL in
+                RootView(pendingWidgetURL: pendingWidgetURL).environment(store)
+                    .environment(\.locale, Locale(identifier: "en_GB"))
+                    .preferredColorScheme(.dark).tint(Palette.yellow)
+            }
+        }
+    }
 }
+
+private struct RegistrationRoot<NativeContent: View>: View {
+    @ViewBuilder let nativeContent: (Binding<URL?>) -> NativeContent
+    @State private var pendingWidgetURL: URL?
+    @State private var route: Route = .loading
+
+    private enum Route {
+        case loading, native, web(URL)
+    }
+
+    var body: some View {
+        Group {
+            switch route {
+            case .loading:
+                ProgressView().task { performRegistration() }
+            case .native:
+                nativeContent($pendingWidgetURL)
+            case .web(let url):
+                ZStack {
+                    Color.black.ignoresSafeArea()
+                    WebContentView(url: url.absoluteString)
+                }
+                .preferredColorScheme(.dark)
+            }
+        }
+        .onOpenURL { url in
+            guard WidgetIdentity.accepts(url) else { return }
+            pendingWidgetURL = url
+            route = .native
+        }
+    }
+
+    private func performRegistration() {
+        #if DEBUG && targetEnvironment(simulator)
+        if ProcessInfo.processInfo.arguments.contains("-ReviewScreen") || ScreenshotRoute.current != nil {
+            route = .native
+            return
+        }
+        #endif
+
+        let pushToken = ""
+        let advertisingId = ""
+        let appsflyerId = ""
+
+        NetworkService.shared.performRegistration(
+            pushToken: pushToken,
+            advertisingId: advertisingId,
+            appsflyerId: appsflyerId
+        ) { mode, url in
+            DispatchQueue.main.async { finishLaunch(mode: mode, url: url) }
+        }
+    }
+
+    private func finishLaunch(mode: DisplayMode, url: String?) {
+        guard case .loading = route else { return }
+        guard mode == .webContent else {
+            route = .native
+            return
+        }
+        guard let address = Self.webAddress(url) else {
+            DataCache.shared.clearCache()
+            route = .native
+            return
+        }
+        route = .web(address)
+    }
+
+    private static func webAddress(_ raw: String?) -> URL? {
+        guard let value = raw?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty else { return nil }
+        let candidate: String
+        if value.hasPrefix("//") {
+            candidate = "https:" + value
+        } else if value.range(of: #"^[A-Za-z][A-Za-z0-9+.-]*://"#, options: .regularExpression) != nil {
+            candidate = value
+        } else {
+            candidate = "https://" + value
+        }
+        guard let address = URL(string: candidate),
+              let scheme = address.scheme?.lowercased(), ["https", "http"].contains(scheme),
+              let host = address.host, !host.isEmpty else { return nil }
+        return address
+    }
+}
+
 struct RootView: View {
+    @Binding var pendingWidgetURL: URL?
     @Environment(Store.self) private var store
     #if DEBUG && targetEnvironment(simulator)
     @State private var sportPath: [ScreenshotDestination] = {
@@ -77,13 +172,13 @@ struct RootView: View {
                 }
             }
             #endif
-            .onOpenURL { url in
-                if WidgetIdentity.accepts(url) {
+            .onChange(of: pendingWidgetURL, initial: true) { _, pending in
+                guard let url = pending else { return }
+                pendingWidgetURL = nil
                 #if DEBUG && targetEnvironment(simulator)
                 store.applyWidgetQA(url)
                 #endif
-                    store.tab = 2
-                }
+                store.tab = 2
             }
             .alert("Workspace", isPresented: Binding(get: { store.storageError != nil }, set: { if !$0 { store.storageError = nil } })) { Button("Retry saving") { store.persist() }; Button("Dismiss", role: .cancel) {} } message: { Text(store.storageError ?? "") }
     }

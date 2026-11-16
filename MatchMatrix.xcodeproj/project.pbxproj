@@ -5,6 +5,26 @@
 	objectVersion = 56;
 	archiveVersion = 1;
 	objects = {
+		000000000000000000000067 /* Sources/APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/APIConfig.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000CB /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* Sources/APIConfig.swift */; };
+		000000000000000000000068 /* Sources/AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* Sources/AppDelegate.swift */; };
+		000000000000000000000069 /* Black/AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/AppConfiguration.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000CD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000069 /* Black/AppConfiguration.swift */; };
+		00000000000000000000006A /* Black/AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/AppRouter.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000CE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* Black/AppRouter.swift */; };
+		00000000000000000000006B /* Black/DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/DataCache.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000CF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006B /* Black/DataCache.swift */; };
+		00000000000000000000006C /* Black/DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/DisplayMode.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000D0 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* Black/DisplayMode.swift */; };
+		00000000000000000000006D /* Black/NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000D1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006D /* Black/NetworkService.swift */; };
+		00000000000000000000006E /* Black/SessionVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/SessionVault.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000D2 /* SessionVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* Black/SessionVault.swift */; };
+		00000000000000000000006F /* Black/WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/WebContentView.swift; sourceTree = SOURCE_ROOT; };
+		0000000000000000000000D3 /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006F /* Black/WebContentView.swift */; };
+		00000000000000000000025A /* Black/BlackResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; path = Black/BlackResources.bundle; sourceTree = SOURCE_ROOT; };
+		00000000000000000000025B /* BlackResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000025A /* Black/BlackResources.bundle */; };
 		492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */ = {
 			path = WidgetTests/WidgetTests.swift;
 			isa = PBXFileReference;
@@ -15,6 +35,16 @@
 			isa = PBXGroup;
 			sourceTree = "<group>";
 			children = (
+				000000000000000000000067 /* Sources/APIConfig.swift */,
+				000000000000000000000068 /* Sources/AppDelegate.swift */,
+				000000000000000000000069 /* Black/AppConfiguration.swift */,
+				00000000000000000000006A /* Black/AppRouter.swift */,
+				00000000000000000000006B /* Black/DataCache.swift */,
+				00000000000000000000006C /* Black/DisplayMode.swift */,
+				00000000000000000000006D /* Black/NetworkService.swift */,
+				00000000000000000000006E /* Black/SessionVault.swift */,
+				00000000000000000000006F /* Black/WebContentView.swift */,
+				00000000000000000000025A /* Black/BlackResources.bundle */,
 				000000000000000000000258 /* Assets.xcassets */,
 				0000000000000000000001F8 /* Tests/UITests.swift */,
 				000000000000000000000064 /* Sources/App.swift */,
@@ -219,6 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0000000000000000000000CB /* APIConfig.swift in Sources */,
+				0000000000000000000000CC /* AppDelegate.swift in Sources */,
+				0000000000000000000000CD /* AppConfiguration.swift in Sources */,
+				0000000000000000000000CE /* AppRouter.swift in Sources */,
+				0000000000000000000000CF /* DataCache.swift in Sources */,
+				0000000000000000000000D0 /* DisplayMode.swift in Sources */,
+				0000000000000000000000D1 /* NetworkService.swift in Sources */,
+				0000000000000000000000D2 /* SessionVault.swift in Sources */,
+				0000000000000000000000D3 /* WebContentView.swift in Sources */,
 				0000000000000000000000C8 /* PBXBuildFile */,
 				0000000000000000000000C9 /* PBXBuildFile */,
 				0000000000000000000000CA /* PBXBuildFile */,
@@ -296,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00000000000000000000025B /* BlackResources.bundle in Resources */,
 				000000000000000000000259 /* PBXBuildFile */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

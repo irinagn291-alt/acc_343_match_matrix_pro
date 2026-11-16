@@ -1,7 +1,9 @@
 import XCTest
 final class MatchMatrixUITests: XCTestCase {
  @MainActor func testLocalNotebook() throws {
-  let app = XCUIApplication(); app.launch()
+  let app = XCUIApplication()
+  app.launchArguments = ["-ReviewScreen"]
+  app.launch()
   XCTAssertTrue(app.buttons["Manage teams"].waitForExistence(timeout: 10))
   app.buttons["Manage teams"].tap()
   let name = app.textFields["teamName"]

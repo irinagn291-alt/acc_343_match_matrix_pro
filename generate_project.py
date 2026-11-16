@@ -5,8 +5,11 @@ def add(key,body): objects[key]=body; return key
 def uid(n): return f'{n:024X}'
 project,main,products,target,product,sources,resources,frameworks,configs,pconfigs=[uid(i) for i in range(1,11)]
 refs=[]; builds=[]
-for n,name in enumerate(['App.swift','Domain.swift','Store.swift']):
- ref=add(uid(100+n),f'isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/{name}; sourceTree = "<group>";')
+source_paths = ['Sources/App.swift', 'Sources/Domain.swift', 'Sources/Store.swift',
+                'Sources/APIConfig.swift', 'Sources/AppDelegate.swift']
+source_paths.extend(path.relative_to(root).as_posix() for path in sorted((root / 'Black').glob('*.swift')))
+for n,name in enumerate(source_paths):
+ ref=add(uid(100+n),f'isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = {name}; sourceTree = "<group>";')
  builds.append(add(uid(200+n),f'isa = PBXBuildFile; fileRef = {ref};')); refs.append(ref)
 add(main,f'isa = PBXGroup; children = ({",".join(refs+[products])}); sourceTree = "<group>";')
 add(products,f'isa = PBXGroup; children = ({product}); name = Products; sourceTree = "<group>";')
@@ -44,7 +47,10 @@ def reference(t,n): return f'<BuildableReference BuildableIdentifier="primary" B
 asset=add(uid(600),'isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";')
 assetbuild=add(uid(601),f'isa = PBXBuildFile; fileRef = {asset};')
 objects[main]=objects[main].replace('children = (',f'children = ({asset},')
-objects[resources]=objects[resources].replace('files = ()',f'files = ({assetbuild})')
+browser_bundle = add(uid(602), 'isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; path = Black/BlackResources.bundle; sourceTree = SOURCE_ROOT;')
+browser_resource = add(uid(603), f'isa = PBXBuildFile; fileRef = {browser_bundle};')
+objects[main] = objects[main].replace('children = (', f'children = ({browser_bundle},')
+objects[resources] = objects[resources].replace('files = ()', f'files = ({assetbuild},{browser_resource})')
 for n in [300,301]: objects[uid(n)]=objects[uid(n)].replace('buildSettings = {','buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ')
 (root/'MatchMatrix.xcodeproj/project.pbxproj').write_text('// !$*UTF8*$!\n{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {\n'+ '\n'.join(f'{key} = {{{body}}};' for key,body in objects.items())+f'\n}}; rootObject = {project}; }}')
 

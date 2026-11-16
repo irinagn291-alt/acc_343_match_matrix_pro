@@ -17,6 +17,7 @@ targets:
     type: application
     platform: iOS
     sources:
+    - Black
     - Sources
     - Assets.xcassets
     - WidgetShared
@@ -70,7 +71,7 @@ targets:
     type: bundle.ui-testing
     platform: iOS
     sources:
-    - Tests
+    - Tests/UITests.swift
     - WidgetTests/WidgetIntegrationTests.swift
     settings:
       base:
