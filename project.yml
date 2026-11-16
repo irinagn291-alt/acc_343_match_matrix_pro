@@ -1,5 +1,6 @@
 name: MatchMatrix
 options:
+  createIntermediateGroups: true
   deploymentTarget:
     iOS: '17.0'
 settings:

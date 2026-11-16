@@ -5,68 +5,108 @@
 	objectVersion = 56;
 	archiveVersion = 1;
 	objects = {
-		000000000000000000000067 /* Sources/APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/APIConfig.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000CB /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* Sources/APIConfig.swift */; };
-		000000000000000000000068 /* Sources/AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* Sources/AppDelegate.swift */; };
-		000000000000000000000069 /* Black/AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/AppConfiguration.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000CD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000069 /* Black/AppConfiguration.swift */; };
-		00000000000000000000006A /* Black/AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/AppRouter.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000CE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* Black/AppRouter.swift */; };
-		00000000000000000000006B /* Black/DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/DataCache.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000CF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006B /* Black/DataCache.swift */; };
-		00000000000000000000006C /* Black/DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/DisplayMode.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000D0 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* Black/DisplayMode.swift */; };
-		00000000000000000000006D /* Black/NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/NetworkService.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000D1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006D /* Black/NetworkService.swift */; };
-		00000000000000000000006E /* Black/SessionVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/SessionVault.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000D2 /* SessionVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* Black/SessionVault.swift */; };
-		00000000000000000000006F /* Black/WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Black/WebContentView.swift; sourceTree = SOURCE_ROOT; };
-		0000000000000000000000D3 /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006F /* Black/WebContentView.swift */; };
-		00000000000000000000025A /* Black/BlackResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; path = Black/BlackResources.bundle; sourceTree = SOURCE_ROOT; };
-		00000000000000000000025B /* BlackResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000025A /* Black/BlackResources.bundle */; };
-		492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */ = {
-			path = WidgetTests/WidgetTests.swift;
+		E3865C4E6BA4E3E86B9783B2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000067 /* APIConfig.swift */,
+				000000000000000000000068 /* AppDelegate.swift */,
+				000000000000000000000064 /* App.swift */,
+				000000000000000000000065 /* Domain.swift */,
+				000000000000000000000066 /* Store.swift */,
+				59382A764DE94713F8EA907F /* WidgetBridge.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1DEE3B323F5DFB8A5B1739F7 /* Black */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000069 /* AppConfiguration.swift */,
+				00000000000000000000006A /* AppRouter.swift */,
+				00000000000000000000006B /* DataCache.swift */,
+				00000000000000000000006C /* DisplayMode.swift */,
+				00000000000000000000006D /* NetworkService.swift */,
+				00000000000000000000006E /* SessionVault.swift */,
+				00000000000000000000006F /* WebContentView.swift */,
+				00000000000000000000025A /* BlackResources.bundle */,
+			);
+			path = Black;
+			sourceTree = "<group>";
+		};
+		72CC50E889C4FEE3733BE0E7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000000000000001F8 /* UITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7A0DE8898656F163D29EB750 /* WidgetShared */ = {
+			isa = PBXGroup;
+			children = (
+				E6B6DBC7C47F669F3237D35D /* ProgressWidgetView.swift */,
+				5CC5D55D04C72DE715E532EA /* WidgetIdentity.swift */,
+				A4F9D01B52B9B0CF400C1D32 /* WidgetSnapshot.swift */,
+			);
+			path = WidgetShared;
+			sourceTree = "<group>";
+		};
+		438CCFE688BC454D02A7ECA4 /* WidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A8103FDF68A2F9CB84A83 /* ProgressWidget.swift */,
+			);
+			path = WidgetExtension;
+			sourceTree = "<group>";
+		};
+		08A1A549C25AA1948E224663 /* WidgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AD44927638F303B2D2DE71B /* WidgetIntegrationTests.swift */,
+				492ADC98F832AAAC644E45B2 /* WidgetTests.swift */,
+			);
+			path = WidgetTests;
+			sourceTree = "<group>";
+		};
+		000000000000000000000067 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		0000000000000000000000CB /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* APIConfig.swift */; };
+		000000000000000000000068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0000000000000000000000CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* AppDelegate.swift */; };
+		000000000000000000000069 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		0000000000000000000000CD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000069 /* AppConfiguration.swift */; };
+		00000000000000000000006A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		0000000000000000000000CE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006A /* AppRouter.swift */; };
+		00000000000000000000006B /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		0000000000000000000000CF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006B /* DataCache.swift */; };
+		00000000000000000000006C /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = "<group>"; };
+		0000000000000000000000D0 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006C /* DisplayMode.swift */; };
+		00000000000000000000006D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0000000000000000000000D1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006D /* NetworkService.swift */; };
+		00000000000000000000006E /* SessionVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionVault.swift; sourceTree = "<group>"; };
+		0000000000000000000000D2 /* SessionVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006E /* SessionVault.swift */; };
+		00000000000000000000006F /* WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentView.swift; sourceTree = "<group>"; };
+		0000000000000000000000D3 /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000006F /* WebContentView.swift */; };
+		00000000000000000000025A /* BlackResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; path = BlackResources.bundle; sourceTree = "<group>"; };
+		00000000000000000000025B /* BlackResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000025A /* BlackResources.bundle */; };
+		492ADC98F832AAAC644E45B2 /* WidgetTests.swift */ = {
+			path = WidgetTests.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		000000000000000000000002 /* PBXGroup */ = {
 			isa = PBXGroup;
 			sourceTree = "<group>";
 			children = (
-				000000000000000000000067 /* Sources/APIConfig.swift */,
-				000000000000000000000068 /* Sources/AppDelegate.swift */,
-				000000000000000000000069 /* Black/AppConfiguration.swift */,
-				00000000000000000000006A /* Black/AppRouter.swift */,
-				00000000000000000000006B /* Black/DataCache.swift */,
-				00000000000000000000006C /* Black/DisplayMode.swift */,
-				00000000000000000000006D /* Black/NetworkService.swift */,
-				00000000000000000000006E /* Black/SessionVault.swift */,
-				00000000000000000000006F /* Black/WebContentView.swift */,
-				00000000000000000000025A /* Black/BlackResources.bundle */,
 				000000000000000000000258 /* Assets.xcassets */,
-				0000000000000000000001F8 /* Tests/UITests.swift */,
-				000000000000000000000064 /* Sources/App.swift */,
-				000000000000000000000065 /* Sources/Domain.swift */,
-				000000000000000000000066 /* Sources/Store.swift */,
+				E3865C4E6BA4E3E86B9783B2 /* Sources */,
+				1DEE3B323F5DFB8A5B1739F7 /* Black */,
+				72CC50E889C4FEE3733BE0E7 /* Tests */,
+				7A0DE8898656F163D29EB750 /* WidgetShared */,
+				438CCFE688BC454D02A7ECA4 /* WidgetExtension */,
+				08A1A549C25AA1948E224663 /* WidgetTests */,
 				000000000000000000000003 /* Products */,
-				FFFAEA4705E9BA5B1252D18B /* Widgets */,
-				0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */,
-				492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */,
 			);
-		};
-		FFFAEA4705E9BA5B1252D18B /* Widgets */ = {
-			isa = PBXGroup;
-			name = Widgets;
-			children = (
-				E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */,
-				5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */,
-				A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */,
-				59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */,
-				AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */,
-			);
-			sourceTree = "<group>";
 		};
 		00000000000000000000000A /* XCConfigurationList */ = {
 			isa = XCConfigurationList;
@@ -99,11 +139,11 @@
 		};
 		1726604913352F566F7EBE56 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */;
+			fileRef = E6B6DBC7C47F669F3237D35D /* ProgressWidgetView.swift */;
 		};
 		0000000000000000000000CA /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 000000000000000000000066 /* Sources/Store.swift */;
+			fileRef = 000000000000000000000066 /* Store.swift */;
 		};
 		2F6A49F45958F64B10B4D9CB /* XCConfigurationList */ = {
 			isa = XCConfigurationList;
@@ -114,11 +154,11 @@
 				882B069DA9E1DE4745ABBA3C /* Release */,
 			);
 		};
-		AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */ = {
-			path = WidgetExtension/ProgressWidget.swift;
+		AB5A8103FDF68A2F9CB84A83 /* ProgressWidget.swift */ = {
+			path = ProgressWidget.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		000000000000000000000004 /* MatchMatrix */ = {
 			productType = "com.apple.product-type.application";
@@ -141,7 +181,7 @@
 		};
 		6E7DF586ACF3084ACC94A05D /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */;
+			fileRef = 0AD44927638F303B2D2DE71B /* WidgetIntegrationTests.swift */;
 		};
 		575DF396EA883A266C883FBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -168,7 +208,7 @@
 		};
 		CF6E7274E12D795F7453A967 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */;
+			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetIdentity.swift */;
 		};
 		000000000000000000000005 /* MatchMatrix.app */ = {
 			path = MatchMatrix.app;
@@ -291,11 +331,11 @@
 				);
 			};
 		};
-		59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */ = {
-			path = Sources/WidgetBridge.swift;
+		59382A764DE94713F8EA907F /* WidgetBridge.swift */ = {
+			path = WidgetBridge.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		00000000000000000000012D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -325,11 +365,11 @@
 		};
 		C9B460B1B8CF436E3220257F /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */;
+			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetSnapshot.swift */;
 		};
 		78D507190482272BD75AA502 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = AB5A8103FDF68A2F9CB84A83 /* WidgetExtension/ProgressWidget.swift */;
+			fileRef = AB5A8103FDF68A2F9CB84A83 /* ProgressWidget.swift */;
 		};
 		000000000000000000000007 /* PBXResourcesBuildPhase */ = {
 			isa = PBXResourcesBuildPhase;
@@ -356,8 +396,8 @@
 			};
 			name = Debug;
 		};
-		000000000000000000000064 /* Sources/App.swift */ = {
-			path = Sources/App.swift;
+		000000000000000000000064 /* App.swift */ = {
+			path = App.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			sourceTree = "<group>";
@@ -369,15 +409,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */ = {
-			path = WidgetShared/WidgetIdentity.swift;
+		5CC5D55D04C72DE715E532EA /* WidgetIdentity.swift */ = {
+			path = WidgetIdentity.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		BDDBDCE60D83457FC5F3FC2F /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetShared/WidgetIdentity.swift */;
+			fileRef = 5CC5D55D04C72DE715E532EA /* WidgetIdentity.swift */;
 		};
 		0000000000000000000001F4 /* MatchMatrixUITests */ = {
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -396,7 +436,7 @@
 		};
 		0000000000000000000000C8 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 000000000000000000000064 /* Sources/App.swift */;
+			fileRef = 000000000000000000000064 /* App.swift */;
 		};
 		000000000000000000000191 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -408,7 +448,7 @@
 		};
 		E19C85C1E81BEB808A801FA7 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 59382A764DE94713F8EA907F /* Sources/WidgetBridge.swift */;
+			fileRef = 59382A764DE94713F8EA907F /* WidgetBridge.swift */;
 		};
 		000000000000000000000009 /* XCConfigurationList */ = {
 			isa = XCConfigurationList;
@@ -419,8 +459,8 @@
 				00000000000000000000012D /* Release */,
 			);
 		};
-		000000000000000000000065 /* Sources/Domain.swift */ = {
-			path = Sources/Domain.swift;
+		000000000000000000000065 /* Domain.swift */ = {
+			path = Domain.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			sourceTree = "<group>";
@@ -433,11 +473,11 @@
 		};
 		0000000000000000000000C9 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 000000000000000000000065 /* Sources/Domain.swift */;
+			fileRef = 000000000000000000000065 /* Domain.swift */;
 		};
 		1677249E11B079EFFCBDD277 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */;
+			fileRef = A4F9D01B52B9B0CF400C1D32 /* WidgetSnapshot.swift */;
 		};
 		BB86C6EEF09F1B8EFF2F10E1 /* MatchMatrixWidget */ = {
 			productType = "com.apple.product-type.app-extension";
@@ -456,8 +496,8 @@
 			buildRules = (
 			);
 		};
-		000000000000000000000066 /* Sources/Store.swift */ = {
-			path = Sources/Store.swift;
+		000000000000000000000066 /* Store.swift */ = {
+			path = Store.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			sourceTree = "<group>";
@@ -492,11 +532,11 @@
 			target = 000000000000000000000004 /* MatchMatrix */;
 			targetProxy = 660595B11F752DD6E7924E96 /* PBXContainerItemProxy */;
 		};
-		E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */ = {
-			path = WidgetShared/ProgressWidgetView.swift;
+		E6B6DBC7C47F669F3237D35D /* ProgressWidgetView.swift */ = {
+			path = ProgressWidgetView.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		631CF1420BEB6D09B24A4B41 /* MatchMatrixWidgetTests.xctest */ = {
 			path = MatchMatrixWidgetTests.xctest;
@@ -575,7 +615,7 @@
 		};
 		89C2DE8C16433534F44E0536 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 492ADC98F832AAAC644E45B2 /* WidgetTests/WidgetTests.swift */;
+			fileRef = 492ADC98F832AAAC644E45B2 /* WidgetTests.swift */;
 		};
 		0000000000000000000001FF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -591,8 +631,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 		};
-		0000000000000000000001F8 /* Tests/UITests.swift */ = {
-			path = Tests/UITests.swift;
+		0000000000000000000001F8 /* UITests.swift */ = {
+			path = UITests.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			sourceTree = "<group>";
@@ -606,7 +646,7 @@
 		};
 		A80BC4AE909D99BC95DAFAA4 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = E6B6DBC7C47F669F3237D35D /* WidgetShared/ProgressWidgetView.swift */;
+			fileRef = E6B6DBC7C47F669F3237D35D /* ProgressWidgetView.swift */;
 		};
 		000000000000000000000258 /* Assets.xcassets */ = {
 			path = Assets.xcassets;
@@ -616,7 +656,7 @@
 		};
 		0000000000000000000001F9 /* PBXBuildFile */ = {
 			isa = PBXBuildFile;
-			fileRef = 0000000000000000000001F8 /* Tests/UITests.swift */;
+			fileRef = 0000000000000000000001F8 /* UITests.swift */;
 		};
 		0414BA351A484FAF9FCB0609 /* Embed App Extensions */ = {
 			buildActionMask = 2147483647;
@@ -633,11 +673,11 @@
 			isa = PBXBuildFile;
 			fileRef = 000000000000000000000258 /* Assets.xcassets */;
 		};
-		A4F9D01B52B9B0CF400C1D32 /* WidgetShared/WidgetSnapshot.swift */ = {
-			path = WidgetShared/WidgetSnapshot.swift;
+		A4F9D01B52B9B0CF400C1D32 /* WidgetSnapshot.swift */ = {
+			path = WidgetSnapshot.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		B5B1DACA89C88491274D5CF8 /* MatchMatrixWidget.appex */ = {
 			path = MatchMatrixWidget.appex;
@@ -645,11 +685,11 @@
 			explicitFileType = "wrapper.app-extension";
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0AD44927638F303B2D2DE71B /* WidgetTests/WidgetIntegrationTests.swift */ = {
-			path = WidgetTests/WidgetIntegrationTests.swift;
+		0AD44927638F303B2D2DE71B /* WidgetIntegrationTests.swift */ = {
+			path = WidgetIntegrationTests.swift;
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		000000000000000000000001 /* PBXProject */ = {
 			buildConfigurationList = 00000000000000000000000A /* XCConfigurationList */;
