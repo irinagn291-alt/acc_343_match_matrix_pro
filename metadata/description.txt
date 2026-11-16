@@ -1,9 +1,9 @@
 Keep your football records together in Match Matrix, a personal notebook for iPhone and iPad.
 
-Add teams and record completed matches or planned fixtures. Include the competition and date, and add optional line-ups and notes. Browse results and upcoming fixtures by competition, filter by date and bookmark matches you want to revisit.
+Add teams and record completed matches or planned fixtures. Include the competition and date, and add optional lineups and notes. Browse results and upcoming fixtures by competition, filter by date, and bookmark matches you want to revisit.
 
-Open a match to explore its recorded details, form, goals, previous meetings and line-ups. Compare two teams using completed matches, with filters for sample size, venue and competition. Tap a comparison value to see the matches behind it.
+Open a match to explore its recorded details, form, goals, previous meetings, and lineups. Compare two teams using completed matches, with filters for sample size, venue, and competition. Tap a comparison value to see the matches behind it.
 
-Save comparison configurations for later and customise the three statistics shown on match cards. A small or medium widget shows a local summary of results and saved work.
+Save comparison configurations for later and customize the three statistics shown on match cards. A small or medium widget shows a local summary of results and saved work.
 
 Match Matrix requires iOS 17 or later. The app interface is in English (UK).
